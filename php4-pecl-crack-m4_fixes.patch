@@ -1,0 +1,12 @@
+diff -burN crack-0.3.orig/config.m4 crack-0.3/config.m4
+--- crack-0.3.orig/config.m4	2005-09-05 15:23:35.874777736 +0200
++++ crack-0.3/config.m4	2005-09-05 15:23:59.894126240 +0200
+@@ -10,7 +10,7 @@
+   if test "$PHP_CRACK" != "yes"; then
+     AC_MSG_ERROR(Only the bundled library is supported right now)
+     
+-    for i in $PHP_CRACK/lib $PHP_CRACK/cracklib /usr/local/lib /usr/lib; do
++    for i in $PHP_CRACK/lib $PHP_CRACK/cracklib /usr/local/lib /usr/lib /usr/lib64; do
+       test -f $i/libcrack.$SHLIB_SUFFIX_NAME -o -f $i/libcrack.a && CRACK_LIBDIR=$i && break
+     done
+ 
