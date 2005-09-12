@@ -33,8 +33,8 @@ In PECL status of this extension is: %{_status}.
 
 %description -l pl
 Ten pakiet dostarcza interfejsu do bibliotek cracklib (libcrack),
-dostarczanych z wiêkszo¶ci± dystrybucji uniksopodobnych. Pozwala to
-na porównanie hase³ wzglêdem s³owników celem zapewnienia minimalnego
+dostarczanych z wiêkszo¶ci± dystrybucji uniksopodobnych. Pozwala to na
+porównanie hase³ wzglêdem s³owników celem zapewnienia minimalnego
 poziomu bezpieczeñstwa.
 
 To rozszerzenie ma w PECL status: %{_status}.
@@ -75,5 +75,5 @@ fi
 %files
 %defattr(644,root,root,755)
 %doc %{_modname}-%{version}/{CREDITS,EXPERIMENTAL}
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/conf.d/%{_modname}.ini
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/conf.d/%{_modname}.ini
 %attr(755,root,root) %{extensionsdir}/%{_modname}.so
