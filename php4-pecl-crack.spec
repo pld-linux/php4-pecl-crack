@@ -4,7 +4,7 @@
 %define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
 
 Summary:	%{_modname} - checks if password is vulnerable to dictionary attacks
-Summary(pl):	%{_modname} - sprawdzanie czy has³o jest podatne na ataki s³ownikowe
+Summary(pl.UTF-8):   %{_modname} - sprawdzanie czy hasÅ‚o jest podatne na ataki sÅ‚ownikowe
 Name:		php4-pecl-%{_modname}
 Version:	0.3
 Release:	2
@@ -31,11 +31,11 @@ some minimal level of password security.
 
 In PECL status of this extension is: %{_status}.
 
-%description -l pl
+%description -l pl.UTF-8
 Ten pakiet dostarcza interfejsu do bibliotek cracklib (libcrack),
-dostarczanych z wiêkszo¶ci± dystrybucji uniksopodobnych. Pozwala to na
-porównanie hase³ wzglêdem s³owników celem zapewnienia minimalnego
-poziomu bezpieczeñstwa.
+dostarczanych z wiÄ™kszoÅ›ciÄ… dystrybucji uniksopodobnych. Pozwala to na
+porÃ³wnanie haseÅ‚ wzglÄ™dem sÅ‚ownikÃ³w celem zapewnienia minimalnego
+poziomu bezpieczeÅ„stwa.
 
 To rozszerzenie ma w PECL status: %{_status}.
 
