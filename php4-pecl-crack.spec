@@ -16,9 +16,9 @@ Patch0:		%{name}-m4_fixes.patch
 URL:		http://pecl.php.net/package/crack/
 BuildRequires:	cracklib-devel
 BuildRequires:	php4-devel
-BuildRequires:	rpmbuild(macros) >= 1.322
+BuildRequires:	rpmbuild(macros) >= 1.344
 %{?requires_php_extension}
-Requires:	%{_sysconfdir}/conf.d
+Requires:	php4-common >= 3:4.4.0-3
 Obsoletes:	php-crack
 Obsoletes:	php-pear-%{_modname}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -63,13 +63,11 @@ EOF
 rm -rf $RPM_BUILD_ROOT
 
 %post
-[ ! -f /etc/apache/conf.d/??_mod_php4.conf ] || %service -q apache restart
-[ ! -f /etc/httpd/httpd.conf/??_mod_php4.conf ] || %service -q httpd restart
+%php4_webserver_restart
 
 %postun
 if [ "$1" = 0 ]; then
-	[ ! -f /etc/apache/conf.d/??_mod_php4.conf ] || %service -q apache restart
-	[ ! -f /etc/httpd/httpd.conf/??_mod_php4.conf ] || %service -q httpd restart
+	%php4_webserver_restart
 fi
 
 %files
