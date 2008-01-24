@@ -2,7 +2,6 @@
 %define		_status		beta
 %define		_sysconfdir	/etc/php4
 %define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
-
 Summary:	%{_modname} - checks if password is vulnerable to dictionary attacks
 Summary(pl.UTF-8):	%{_modname} - sprawdzanie czy hasło jest podatne na ataki słownikowe
 Name:		php4-pecl-%{_modname}
@@ -17,10 +16,10 @@ URL:		http://pecl.php.net/package/crack/
 BuildRequires:	cracklib-devel
 BuildRequires:	php4-devel
 BuildRequires:	rpmbuild(macros) >= 1.344
-%{?requires_php_extension}
 Requires:	php4-common >= 3:4.4.0-3
 Obsoletes:	php-crack
 Obsoletes:	php-pear-%{_modname}
+%{?requires_php_extension}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
